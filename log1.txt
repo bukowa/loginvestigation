@@ -1,4 +1,4 @@
-+ node --test --test-force-exit --test-timeout=90000 tests-e2e-js/dist/main.js
++ node --test --test-force-exit --test-timeout=90000 --require ts-node/register tests-e2e-js
 TAP version 13
 # [36m[ [DEBUG] default - [39m{
 #   PATH_TAURI_APP_BINARY: 'D:\\\\a\\\\tauri-e2e\\\\tauri-e2e/target/release/tauri-app.exe',
@@ -25,7 +25,7 @@ TAP version 13
 #     }
 #   }
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] COMMAND InitSession {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [a12a165a2d7c1fb6d6b70c346fba2967] COMMAND InitSession {
 #    "capabilities": {
 #       "alwaysMatch": {
 #          "browserName": "webview2",
@@ -106,25 +106,25 @@ TAP version 13
 # [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: ChromeDriver supports communication with Chrome via pipes. This is more reliable and more secure.
 # [INFO]: Use the --remote-debugging-pipe Chrome switch instead of the default --remote-debugging-port to enable this communication mode.
 # [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: WEBVIEW2_ADDITIONAL_BROWSER_ARGUMENTS = --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Launching Microsoft Edge: "D:\\a\\tauri-e2e\\tauri-e2e/target/release/tauri-app.exe"
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools HTTP Request: http://localhost:54593/json/version
+# [INFO]: Launching Microsoft Edge: "D:\\a\\tauri-e2e\\tauri-e2e/target/release/tauri-app.exe"
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools HTTP Request: http://localhost:54615/json/version
 # [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools HTTP Response: {\\r
 #    "Browser": "Edg/126.0.2592.81",\\r
 #    "Protocol-Version": "1.3",\\r
 #    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0",\\r
 #    "V8-Version": "12.6.19.7",\\r
 #    "WebKit-Version": "537.36 (@38151611195b9357be892bf1ae5c4b7942a1b216)",\\r
-#    "webSocketDebuggerUrl": "ws://localhost:54593/devtools/browser/37fbf35d-76ba-4bf2-8522-5b71c55502be"\\r
+#    "webSocketDebuggerUrl": "ws://localhost:54615/devtools/browser/80ee61f9-91bb-4ff9-9712-ac298241d504"\\r
 # }\\r
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools HTTP Request: http://localhost:54593/json/list
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools HTTP Request: http://localhost:54615/json/list
 # [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools HTTP Response: [ {\\r
 #    "description": "",\\r
-#    "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:54593/devtools/page/797F7AE9AE7D1A95B7A1CD4725AFA82E",\\r
-#    "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",\\r
+#    "devtoolsFrontendUrl": "/devtools/inspector.html?ws=localhost:54615/devtools/page/1C8D17C7BA42B0252B57F6B242E6CDD2",\\r
+#    "id": "1C8D17C7BA42B0252B57F6B242E6CDD2",\\r
 #    "title": "about:blank",\\r
 #    "type": "page",\\r
-#    "url": "about:blank",\\r
-#    "webSocketDebuggerUrl": "ws://localhost:54593/devtools/page/797F7AE9AE7D1A95B7A1CD4725AFA82E"\\r
+#    "url": "http://tauri.localhost/",\\r
+#    "webSocketDebuggerUrl": "ws://localhost:54615/devtools/page/1C8D17C7BA42B0252B57F6B242E6CDD2"\\r
 # } ]\\r
 # [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: resolved localhost to ["::1","127.0.0.1"]
 # [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Target.getTargets (id=1) (session_id=) browser {
@@ -132,94 +132,94 @@ TAP version 13
 # [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Target.getTargets (id=1) (session_id=) browser {
 #    "targetInfos": [ {
 #       "attached": true,
-#       "browserContextId": "C6BA3BFA2A0ABDE10740398DF46963E7",
+#       "browserContextId": "3324DFFA94A04C550A9E3FF3C2C0C346",
 #       "canAccessOpener": false,
-#       "pid": 7100,
-#       "targetId": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
+#       "pid": 2392,
+#       "targetId": "1C8D17C7BA42B0252B57F6B242E6CDD2",
 #       "title": "about:blank",
 #       "type": "page",
-#       "url": "about:blank"
+#       "url": "http://tauri.localhost/"
 #    } ]
 # }
 # [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Target.attachToTarget (id=2) (session_id=) browser {
 #    "flatten": true,
-#    "targetId": "797F7AE9AE7D1A95B7A1CD4725AFA82E"
+#    "targetId": "1C8D17C7BA42B0252B57F6B242E6CDD2"
 # }
 # [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Target.attachedToTarget (session_id=) browser {
-#    "sessionId": "007491C2E79B21B0CD32AA92B6EB78DF",
+#    "sessionId": "1FC96C2C60FA158F6397542F7D690989",
 #    "targetInfo": {
 #       "attached": true,
-#       "browserContextId": "C6BA3BFA2A0ABDE10740398DF46963E7",
+#       "browserContextId": "3324DFFA94A04C550A9E3FF3C2C0C346",
 #       "canAccessOpener": false,
-#       "pid": 7100,
-#       "targetId": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
+#       "pid": 2392,
+#       "targetId": "1C8D17C7BA42B0252B57F6B242E6CDD2",
 #       "title": "about:blank",
 #       "type": "page",
-#       "url": "about:blank"
+#       "url": "http://tauri.localhost/"
 #    },
 #    "waitingForDebugger": false
 # }
 # [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Target.attachToTarget (id=2) (session_id=) browser {
-#    "sessionId": "007491C2E79B21B0CD32AA92B6EB78DF"
+#    "sessionId": "1FC96C2C60FA158F6397542F7D690989"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.enable (id=3) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Command: Page.enable (id=3) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.addScriptToEvaluateOnNewDocument (id=4) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.addScriptToEvaluateOnNewDocument (id=4) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "source": "(function () {window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_a..."
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=5) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=5) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "expression": "(function () {window.cdc_adoQpoasnfa76pfcZLmcfl_Array = window.Array;window.cdc_adoQpoasnfa76pfcZLmcfl_Object = window.Object;window.cdc_adoQpoasnfa76pfcZLmcfl_Promise = window.Promise;window.cdc_a..."
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Log.enable (id=6) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Log.enable (id=6) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Target.setAutoAttach (id=7) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Target.setAutoAttach (id=7) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "autoAttach": true,
 #    "flatten": true,
 #    "waitForDebuggerOnStart": false
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.enable (id=3) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.enable (id=3) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.addScriptToEvaluateOnNewDocument (id=4) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.addScriptToEvaluateOnNewDocument (id=4) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "identifier": "1"
 # }
-# [DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=5) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=5) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "result": {
 #       "type": "undefined"
 #    }
 # }
-# [DEBUG]: DevTools WebSocket Response: Log.enable (id=6) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Log.enable (id=6) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [DEBUG]: DevTools WebSocket Response: Target.setAutoAttach (id=7) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Target.setAutoAttach (id=7) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [DEBUG]: DevTools WebSocket Command: Runtime.enable (id=8) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Command: Runtime.enable (id=8) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Runtime.executionContextCreated (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Runtime.executionContextCreated (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "context": {
 #       "auxData": {
-#          "frameId": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
+#          "frameId": "1C8D17C7BA42B0252B57F6B242E6CDD2",
 #          "isDefault": true,
 #          "type": "default"
 #       },
 #       "id": 1,
 #       "name": "",
 #       "origin": "://",
-#       "uniqueId": "-2644022540929529221.5554012963429626878"
+#       "uniqueId": "-3455513719753409994.2681163827110347642"
 #    }
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.enable (id=8) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.enable (id=8) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [DEBUG]: DevTools WebSocket Command: Runtime.enable (id=9) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Command: Runtime.enable (id=9) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.enable (id=9) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.enable (id=9) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] RESPONSE InitSession {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [a12a165a2d7c1fb6d6b70c346fba2967] RESPONSE InitSession {
 #    "capabilities": {
 #       "acceptInsecureCerts": false,
 #       "browserName": "webview2",
 #       "browserVersion": "126.0.2592.81",
 #       "fedcm:accounts": true,
 #       "ms:edgeOptions": {
-#          "debuggerAddress": "localhost:54593"
+#          "debuggerAddress": "localhost:54615"
 #       },
 #       "msedge": {
 #          "msedgedriverVersion": "126.0.2592.68 (30e1b6cc72a8cf6df643b6a0f69884a4936488ba)",
@@ -244,7 +244,7 @@ TAP version 13
 #       "webauthn:extension:prf": true,
 #       "webauthn:virtualAuthenticators": true
 #    },
-#    "sessionId": "f0e42ebb8fc6c4b01f69757be8c8f7e5"
+#    "sessionId": "a12a165a2d7c1fb6d6b70c346fba2967"
 # }
 # [32m[ [INFO] default - [39mDriver created {
 #   driver: WebDriver {
@@ -261,140 +261,120 @@ TAP version 13
 #   }
 # }
 # [32m[ [INFO] default - [39mWaiting for body element
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Page.frameStartedLoading (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameId": "797F7AE9AE7D1A95B7A1CD4725AFA82E"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] COMMAND FindElements {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [a12a165a2d7c1fb6d6b70c346fba2967] COMMAND FindElements {
 #    "using": "css selector",
 #    "value": "body"
 # }
-# [INFO]: Waiting for pending navigations...
-# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=10) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Waiting for pending navigations...
+# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=10) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "expression": "1"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Page.frameResized (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Runtime.executionContextsCleared (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Page.frameNavigated (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frame": {
-#       "adFrameStatus": {
-#          "adFrameType": "none"
-#       },
-#       "crossOriginIsolatedContextType": "NotIsolated",
-#       "domainAndRegistry": "tauri.localhost",
-#       "gatedAPIFeatures": [  ],
-#       "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#       "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#       "mimeType": "text/html",
-#       "secureContextType": "SecureLocalhost",
-#       "securityOrigin": "http://tauri.localhost",
-#       "url": "http://tauri.localhost/"
-#    },
-#    "type": "Navigation"
-# }
-# [DEBUG]: DevTools WebSocket Event: Runtime.executionContextCreated (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "context": {
-#       "auxData": {
-#          "frameId": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "isDefault": true,
-#          "type": "default"
-#       },
-#       "id": 2,
-#       "name": "",
-#       "origin": "http://tauri.localhost",
-#       "uniqueId": "3486246105384540323.-4867044150354688212"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=10) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=10) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "result": {
 #       "description": "1",
 #       "type": "number",
 #       "value": 1
 #    }
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Page.domContentEventFired (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "timestamp": 1062.081943
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=11) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
+#    "expression": "document",
+#    "objectGroup": "9a14b559-fe4f-4c09-9d77-599fe949dc53"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=11) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=11) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
+#    "result": {
+#       "className": "HTMLDocument",
+#       "description": "\#document",
+#       "objectId": "-7598210790503160571.1.1",
+#       "subtype": "node",
+#       "type": "object"
+#    }
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Page.loadEventFired (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "timestamp": 1062.082323
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.describeNode (id=12) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
+#    "objectId": "-7598210790503160571.1.1"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=12) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.describeNode (id=12) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
+#    "node": {
+#       "backendNodeId": 1,
+#       "baseURL": "about:blank",
+#       "childNodeCount": 1,
+#       "compatibilityMode": "QuirksMode",
+#       "documentURL": "about:blank",
+#       "localName": "",
+#       "nodeId": 0,
+#       "nodeName": "\#document",
+#       "nodeType": 9,
+#       "nodeValue": "",
+#       "xmlVersion": ""
+#    }
+# }
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=13) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
+#    "objectGroup": "9a14b559-fe4f-4c09-9d77-599fe949dc53"
+# }
+# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=14) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "awaitPromise": false,
 #    "expression": "document.readyState",
 #    "returnByValue": true,
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
+#    "uniqueContextId": "-3455513719753409994.2681163827110347642"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Event: Page.frameStoppedLoading (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameId": "797F7AE9AE7D1A95B7A1CD4725AFA82E"
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=13) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=11) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=12) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=14) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "result": {
 #       "type": "string",
 #       "value": "complete"
 #    }
 # }
 # [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=13) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=15) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=13) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=15) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "frameTree": {
 #       "frame": {
 #          "adFrameStatus": {
 #             "adFrameType": "none"
 #          },
 #          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
+#          "domainAndRegistry": "",
 #          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
+#          "id": "1C8D17C7BA42B0252B57F6B242E6CDD2",
+#          "loaderId": "80FDA9A12333D81949603FBCD7466BBB",
 #          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
+#          "secureContextType": "InsecureScheme",
+#          "securityOrigin": "://",
+#          "url": "about:blank"
 #       }
 #    }
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=14) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=16) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=14) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=16) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "frameTree": {
 #       "frame": {
 #          "adFrameStatus": {
 #             "adFrameType": "none"
 #          },
 #          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
+#          "domainAndRegistry": "",
 #          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
+#          "id": "1C8D17C7BA42B0252B57F6B242E6CDD2",
+#          "loaderId": "80FDA9A12333D81949603FBCD7466BBB",
 #          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
+#          "secureContextType": "InsecureScheme",
+#          "securityOrigin": "://",
+#          "url": "about:blank"
 #       }
 #    }
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=15) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=17) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "arguments": [  ],
 #    "awaitPromise": true,
 #    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
 #    "serializationOptions": {
 #       "serialization": "deep"
 #    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
+#    "uniqueContextId": "-3455513719753409994.2681163827110347642"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=15) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=17) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "result": {
 #       "className": "Array",
 #       "deepSerializedValue": {
@@ -407,9 +387,9 @@ TAP version 13
 #             "value": {
 #                "attributes": {
 #                },
-#                "backendNodeId": 11,
-#                "childNodeCount": 3,
-#                "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
+#                "backendNodeId": 2,
+#                "childNodeCount": 0,
+#                "loaderId": "80FDA9A12333D81949603FBCD7466BBB",
 #                "localName": "body",
 #                "namespaceURI": "http://www.w3.org/1999/xhtml",
 #                "nodeType": 1,
@@ -418,23 +398,22 @@ TAP version 13
 #          } ]
 #       },
 #       "description": "Array(2)",
-#       "objectId": "135302471925752919.2.1",
+#       "objectId": "-7598210790503160571.1.2",
 #       "subtype": "array",
 #       "type": "object"
 #    }
 # }
 # [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Waiting for pending navigations...
-# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=16) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=18) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "expression": "1"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=16) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=18) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "result": {
 #       "description": "1",
 #       "type": "number",
 #       "value": 1
 #    }
 # }
-# [INFO]: Done waiting for pending navigations. Status: ok
 # [32m[ [INFO] default - [39mBody element found
 # [32m[ [INFO] default - [39mHello world
 # [32m[ [INFO] default - [39mSending hello world to input
@@ -442,20 +421,21 @@ TAP version 13
     # Subtest: should log hello world
     ok 1 - should log hello world
       ---
-      duration_ms: 1.4373
+      duration_ms: 1.3959
       ...
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] RESPONSE FindElements [ {
-#    "element-6066-11e4-a52e-4f735466cecf": "f.797F7AE9AE7D1A95B7A1CD4725AFA82E.d.4EF5B3B4665E8BDCE92AA448306C11A4.e.11"
+# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Done waiting for pending navigations. Status: ok
+# [INFO]: [a12a165a2d7c1fb6d6b70c346fba2967] RESPONSE FindElements [ {
+#    "element-6066-11e4-a52e-4f735466cecf": "f.1C8D17C7BA42B0252B57F6B242E6CDD2.d.80FDA9A12333D81949603FBCD7466BBB.e.2"
 # } ]
-# [INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] COMMAND FindElement {
+# [INFO]: [a12a165a2d7c1fb6d6b70c346fba2967] COMMAND FindElement {
 #    "using": "css selector",
 #    "value": "input[id=\\"greet-input\\"]"
 # }
 # [INFO]: Waiting for pending navigations...
-# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=17) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=19) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "expression": "1"
 # }
-# [DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=17) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=19) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "result": {
 #       "description": "1",
 #       "type": "number",
@@ -463,720 +443,56 @@ TAP version 13
 #    }
 # }
 # [INFO]: Done waiting for pending navigations. Status: ok
-# [DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=18) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=20) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=18) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=20) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "frameTree": {
 #       "frame": {
 #          "adFrameStatus": {
 #             "adFrameType": "none"
 #          },
 #          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
+#          "domainAndRegistry": "",
 #          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
+#          "id": "1C8D17C7BA42B0252B57F6B242E6CDD2",
+#          "loaderId": "80FDA9A12333D81949603FBCD7466BBB",
 #          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
+#          "secureContextType": "InsecureScheme",
+#          "securityOrigin": "://",
+#          "url": "about:blank"
 #       }
 #    }
 # }
-# [DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=19) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=21) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=19) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=21) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "frameTree": {
 #       "frame": {
 #          "adFrameStatus": {
 #             "adFrameType": "none"
 #          },
 #          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
+#          "domainAndRegistry": "",
 #          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
+#          "id": "1C8D17C7BA42B0252B57F6B242E6CDD2",
+#          "loaderId": "80FDA9A12333D81949603FBCD7466BBB",
 #          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
+#          "secureContextType": "InsecureScheme",
+#          "securityOrigin": "://",
+#          "url": "about:blank"
 #       }
 #    }
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=20) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=22) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "arguments": [  ],
 #    "awaitPromise": true,
 #    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
 #    "serializationOptions": {
 #       "serialization": "deep"
 #    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
+#    "uniqueContextId": "-3455513719753409994.2681163827110347642"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=20) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":{\\"element-6066-11e4-a52e-4f735466cecf\\":0}}"
-#          }, {
-#             "type": "node",
-#             "value": {
-#                "attributes": {
-#                   "id": "greet-input",
-#                   "placeholder": "Enter a name..."
-#                },
-#                "backendNodeId": 10,
-#                "childNodeCount": 0,
-#                "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#                "localName": "input",
-#                "namespaceURI": "http://www.w3.org/1999/xhtml",
-#                "nodeType": 1,
-#                "shadowRoot": {
-#                   "type": "node",
-#                   "value": {
-#                      "backendNodeId": 14,
-#                      "childNodeCount": 2,
-#                      "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#                      "mode": "closed",
-#                      "nodeType": 11
-#                   }
-#                }
-#             }
-#          } ]
-#       },
-#       "description": "Array(2)",
-#       "objectId": "135302471925752919.2.2",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Waiting for pending navigations...
-# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=21) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=21) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] RESPONSE FindElement {
-#    "element-6066-11e4-a52e-4f735466cecf": "f.797F7AE9AE7D1A95B7A1CD4725AFA82E.d.4EF5B3B4665E8BDCE92AA448306C11A4.e.10"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] COMMAND TypeElement {
-#    "id": "f.797F7AE9AE7D1A95B7A1CD4725AFA82E.d.4EF5B3B4665E8BDCE92AA448306C11A4.e.10",
-#    "text": "Hello World",
-#    "value": [ "H", "e", "l", "l", "o", " ", "W", "o", "r", "l", "d" ]
-# }
-# [INFO]: Waiting for pending navigations...
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=22) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=22) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=23) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=23) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=24) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 10,
-#    "objectGroup": "45554a14-fe21-4ed8-a82d-d9e0ad03bd27"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=24) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLInputElement",
-#       "description": "input\#greet-input",
-#       "objectId": "135302471925752919.2.3",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=25) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=25) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=26) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.3"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "45554a14-fe21-4ed8-a82d-d9e0ad03bd27",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=26) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":\\"INPUT\\"}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.4",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=27) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "45554a14-fe21-4ed8-a82d-d9e0ad03bd27"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=28) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=27) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=28) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=29) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 10,
-#    "objectGroup": "a3b626da-ffea-4145-9fe3-615198898768"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=29) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLInputElement",
-#       "description": "input\#greet-input",
-#       "objectId": "135302471925752919.2.5",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=30) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=30) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=31) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.5"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "a3b626da-ffea-4145-9fe3-615198898768",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=31) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":\\"text\\"}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.6",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=32) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "a3b626da-ffea-4145-9fe3-615198898768"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=33) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=32) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=33) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=34) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 10,
-#    "objectGroup": "cf3e0f6a-91ef-4394-89fa-7b94c1455e24"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=34) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLInputElement",
-#       "description": "input\#greet-input",
-#       "objectId": "135302471925752919.2.7",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=35) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=35) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=36) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.7"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "cf3e0f6a-91ef-4394-89fa-7b94c1455e24",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=36) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":false}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.8",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=37) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "cf3e0f6a-91ef-4394-89fa-7b94c1455e24"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=38) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=37) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=38) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=39) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 10,
-#    "objectGroup": "111dc2bd-8685-49a2-9895-9f549d6aa141"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=39) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLInputElement",
-#       "description": "input\#greet-input",
-#       "objectId": "135302471925752919.2.9",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=40) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=40) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=41) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.9"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "111dc2bd-8685-49a2-9895-9f549d6aa141",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=41) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":\\"INPUT\\"}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.10",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=42) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "111dc2bd-8685-49a2-9895-9f549d6aa141"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=43) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "awaitPromise": false,
-#    "expression": "document.hasFocus()",
-#    "returnByValue": true
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=42) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=43) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "type": "boolean",
-#       "value": false
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=44) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=44) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=45) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 10,
-#    "objectGroup": "0e6adf60-1163-4d9c-91bd-4c8f21d9ee16"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=45) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLInputElement",
-#       "description": "input\#greet-input",
-#       "objectId": "135302471925752919.2.11",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=46) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=46) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=47) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.11"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "0e6adf60-1163-4d9c-91bd-4c8f21d9ee16",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=47) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":true}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.12",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=48) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "0e6adf60-1163-4d9c-91bd-4c8f21d9ee16"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=49) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=48) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=49) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=50) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 10,
-#    "objectGroup": "3ded50b1-c0b4-43ad-9f7c-f90f5876d7d2"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=50) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLInputElement",
-#       "description": "input\#greet-input",
-#       "objectId": "135302471925752919.2.13",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=51) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=51) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=52) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.13"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "3ded50b1-c0b4-43ad-9f7c-f90f5876d7d2",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=52) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":true}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.14",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=53) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "3ded50b1-c0b4-43ad-9f7c-f90f5876d7d2"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=54) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=53) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=54) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=55) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 10,
-#    "objectGroup": "eba5e89f-c7db-4650-b88c-57a0ba8df02c"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=55) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLInputElement",
-#       "description": "input\#greet-input",
-#       "objectId": "135302471925752919.2.15",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=56) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=56) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=57) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.15"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "eba5e89f-c7db-4650-b88c-57a0ba8df02c",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=57) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=22) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "result": {
 #       "className": "Array",
 #       "deepSerializedValue": {
@@ -1187,514 +503,26 @@ TAP version 13
 #          } ]
 #       },
 #       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.16",
+#       "objectId": "-7598210790503160571.1.3",
 #       "subtype": "array",
 #       "type": "object"
 #    }
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=58) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "eba5e89f-c7db-4650-b88c-57a0ba8df02c"
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=23) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
+#    "expression": "1"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=59) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=58) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=59) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=60) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 10,
-#    "objectGroup": "a7eeb04b-f46a-45c4-b65c-a37f89efd75d"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=60) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLInputElement",
-#       "description": "input\#greet-input",
-#       "objectId": "135302471925752919.2.17",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=61) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=61) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=62) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.17"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "a7eeb04b-f46a-45c4-b65c-a37f89efd75d",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=62) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=23) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":null}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.18",
-#       "subtype": "array",
-#       "type": "object"
+#       "description": "1",
+#       "type": "number",
+#       "value": 1
 #    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=63) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "a7eeb04b-f46a-45c4-b65c-a37f89efd75d"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=64) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "ShiftLeft",
-#    "key": "Shift",
-#    "modifiers": 0,
-#    "text": "",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "",
-#    "windowsVirtualKeyCode": 16
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=65) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyH",
-#    "key": "H",
-#    "modifiers": 8,
-#    "text": "H",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "h",
-#    "windowsVirtualKeyCode": 72
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=66) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyH",
-#    "key": "H",
-#    "modifiers": 8,
-#    "text": "H",
-#    "type": "char",
-#    "unmodifiedText": "h",
-#    "windowsVirtualKeyCode": 72
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=67) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyH",
-#    "key": "H",
-#    "modifiers": 8,
-#    "text": "H",
-#    "type": "keyUp",
-#    "unmodifiedText": "h",
-#    "windowsVirtualKeyCode": 72
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=68) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "ShiftLeft",
-#    "key": "Shift",
-#    "modifiers": 0,
-#    "text": "",
-#    "type": "keyUp",
-#    "unmodifiedText": "",
-#    "windowsVirtualKeyCode": 16
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=69) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyE",
-#    "key": "e",
-#    "modifiers": 0,
-#    "text": "e",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "e",
-#    "windowsVirtualKeyCode": 69
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=70) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyE",
-#    "key": "e",
-#    "modifiers": 0,
-#    "text": "e",
-#    "type": "char",
-#    "unmodifiedText": "e",
-#    "windowsVirtualKeyCode": 69
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=71) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyE",
-#    "key": "e",
-#    "modifiers": 0,
-#    "text": "e",
-#    "type": "keyUp",
-#    "unmodifiedText": "e",
-#    "windowsVirtualKeyCode": 69
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=72) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyL",
-#    "key": "l",
-#    "modifiers": 0,
-#    "text": "l",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "l",
-#    "windowsVirtualKeyCode": 76
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=73) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyL",
-#    "key": "l",
-#    "modifiers": 0,
-#    "text": "l",
-#    "type": "char",
-#    "unmodifiedText": "l",
-#    "windowsVirtualKeyCode": 76
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=74) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyL",
-#    "key": "l",
-#    "modifiers": 0,
-#    "text": "l",
-#    "type": "keyUp",
-#    "unmodifiedText": "l",
-#    "windowsVirtualKeyCode": 76
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=75) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyL",
-#    "key": "l",
-#    "modifiers": 0,
-#    "text": "l",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "l",
-#    "windowsVirtualKeyCode": 76
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=76) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyL",
-#    "key": "l",
-#    "modifiers": 0,
-#    "text": "l",
-#    "type": "char",
-#    "unmodifiedText": "l",
-#    "windowsVirtualKeyCode": 76
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=77) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyL",
-#    "key": "l",
-#    "modifiers": 0,
-#    "text": "l",
-#    "type": "keyUp",
-#    "unmodifiedText": "l",
-#    "windowsVirtualKeyCode": 76
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=78) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyO",
-#    "key": "o",
-#    "modifiers": 0,
-#    "text": "o",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "o",
-#    "windowsVirtualKeyCode": 79
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=79) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyO",
-#    "key": "o",
-#    "modifiers": 0,
-#    "text": "o",
-#    "type": "char",
-#    "unmodifiedText": "o",
-#    "windowsVirtualKeyCode": 79
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=80) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyO",
-#    "key": "o",
-#    "modifiers": 0,
-#    "text": "o",
-#    "type": "keyUp",
-#    "unmodifiedText": "o",
-#    "windowsVirtualKeyCode": 79
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=81) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "Space",
-#    "key": " ",
-#    "modifiers": 0,
-#    "text": " ",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": " ",
-#    "windowsVirtualKeyCode": 32
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=82) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "Space",
-#    "key": " ",
-#    "modifiers": 0,
-#    "text": " ",
-#    "type": "char",
-#    "unmodifiedText": " ",
-#    "windowsVirtualKeyCode": 32
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=83) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "Space",
-#    "key": " ",
-#    "modifiers": 0,
-#    "text": " ",
-#    "type": "keyUp",
-#    "unmodifiedText": " ",
-#    "windowsVirtualKeyCode": 32
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=84) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "ShiftLeft",
-#    "key": "Shift",
-#    "modifiers": 0,
-#    "text": "",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "",
-#    "windowsVirtualKeyCode": 16
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=85) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyW",
-#    "key": "W",
-#    "modifiers": 8,
-#    "text": "W",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "w",
-#    "windowsVirtualKeyCode": 87
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=86) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyW",
-#    "key": "W",
-#    "modifiers": 8,
-#    "text": "W",
-#    "type": "char",
-#    "unmodifiedText": "w",
-#    "windowsVirtualKeyCode": 87
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=87) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyW",
-#    "key": "W",
-#    "modifiers": 8,
-#    "text": "W",
-#    "type": "keyUp",
-#    "unmodifiedText": "w",
-#    "windowsVirtualKeyCode": 87
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=88) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "ShiftLeft",
-#    "key": "Shift",
-#    "modifiers": 0,
-#    "text": "",
-#    "type": "keyUp",
-#    "unmodifiedText": "",
-#    "windowsVirtualKeyCode": 16
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=89) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyO",
-#    "key": "o",
-#    "modifiers": 0,
-#    "text": "o",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "o",
-#    "windowsVirtualKeyCode": 79
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=90) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyO",
-#    "key": "o",
-#    "modifiers": 0,
-#    "text": "o",
-#    "type": "char",
-#    "unmodifiedText": "o",
-#    "windowsVirtualKeyCode": 79
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=91) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyO",
-#    "key": "o",
-#    "modifiers": 0,
-#    "text": "o",
-#    "type": "keyUp",
-#    "unmodifiedText": "o",
-#    "windowsVirtualKeyCode": 79
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=92) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyR",
-#    "key": "r",
-#    "modifiers": 0,
-#    "text": "r",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "r",
-#    "windowsVirtualKeyCode": 82
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=93) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyR",
-#    "key": "r",
-#    "modifiers": 0,
-#    "text": "r",
-#    "type": "char",
-#    "unmodifiedText": "r",
-#    "windowsVirtualKeyCode": 82
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=94) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyR",
-#    "key": "r",
-#    "modifiers": 0,
-#    "text": "r",
-#    "type": "keyUp",
-#    "unmodifiedText": "r",
-#    "windowsVirtualKeyCode": 82
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=95) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyL",
-#    "key": "l",
-#    "modifiers": 0,
-#    "text": "l",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "l",
-#    "windowsVirtualKeyCode": 76
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=96) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyL",
-#    "key": "l",
-#    "modifiers": 0,
-#    "text": "l",
-#    "type": "char",
-#    "unmodifiedText": "l",
-#    "windowsVirtualKeyCode": 76
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=97) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyL",
-#    "key": "l",
-#    "modifiers": 0,
-#    "text": "l",
-#    "type": "keyUp",
-#    "unmodifiedText": "l",
-#    "windowsVirtualKeyCode": 76
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=98) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyD",
-#    "key": "d",
-#    "modifiers": 0,
-#    "text": "d",
-#    "type": "rawKeyDown",
-#    "unmodifiedText": "d",
-#    "windowsVirtualKeyCode": 68
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=99) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyD",
-#    "key": "d",
-#    "modifiers": 0,
-#    "text": "d",
-#    "type": "char",
-#    "unmodifiedText": "d",
-#    "windowsVirtualKeyCode": 68
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchKeyEvent (id=100) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "code": "KeyD",
-#    "key": "d",
-#    "modifiers": 0,
-#    "text": "d",
-#    "type": "keyUp",
-#    "unmodifiedText": "d",
-#    "windowsVirtualKeyCode": 68
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=63) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=64) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=65) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=66) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=67) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=68) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=69) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=70) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=71) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=72) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=73) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=74) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=75) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=76) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=77) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=78) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=79) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=80) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=81) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=82) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=83) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=84) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=85) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=86) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=87) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=88) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=89) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=90) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=91) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=92) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=93) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=94) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=95) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=96) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=97) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=98) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=99) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [DEBUG]: DevTools WebSocket Response: Input.dispatchKeyEvent (id=100) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
 # }
 # [INFO]: Waiting for pending navigations...
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=101) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=24) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "expression": "1"
 # }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=101) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
+# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=24) (session_id=1FC96C2C60FA158F6397542F7D690989) 1C8D17C7BA42B0252B57F6B242E6CDD2 {
 #    "result": {
 #       "description": "1",
 #       "type": "number",
@@ -1702,955 +530,50 @@ TAP version 13
 #    }
 # }
 # [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] RESPONSE TypeElement
-# [32m[ [INFO] default - [39mClicking submit button
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] COMMAND FindElement {
-#    "using": "css selector",
-#    "value": "button[type=\\"Submit\\"]"
-# }
-# [INFO]: Waiting for pending navigations...
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=102) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=102) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=103) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=103) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=104) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=104) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=105) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [  ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=105) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":{\\"element-6066-11e4-a52e-4f735466cecf\\":0}}"
-#          }, {
-#             "type": "node",
-#             "value": {
-#                "attributes": {
-#                   "type": "submit"
-#                },
-#                "backendNodeId": 15,
-#                "childNodeCount": 1,
-#                "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#                "localName": "button",
-#                "namespaceURI": "http://www.w3.org/1999/xhtml",
-#                "nodeType": 1,
-#                "shadowRoot": null
-#             }
-#          } ]
-#       },
-#       "description": "Array(2)",
-#       "objectId": "135302471925752919.2.19",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Waiting for pending navigations...
-# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=106) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=106) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] RESPONSE FindElement {
-#    "element-6066-11e4-a52e-4f735466cecf": "f.797F7AE9AE7D1A95B7A1CD4725AFA82E.d.4EF5B3B4665E8BDCE92AA448306C11A4.e.15"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] COMMAND ClickElement {
-#    "id": "f.797F7AE9AE7D1A95B7A1CD4725AFA82E.d.4EF5B3B4665E8BDCE92AA448306C11A4.e.15"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Waiting for pending navigations...
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=107) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=107) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=108) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=108) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=109) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 15,
-#    "objectGroup": "d96f772e-4789-4068-966b-dcb7cc7cb4bc"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=109) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLButtonElement",
-#       "description": "button",
-#       "objectId": "135302471925752919.2.20",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=110) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=110) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=111) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.20"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "d96f772e-4789-4068-966b-dcb7cc7cb4bc",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=111) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":\\"button\\"}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.21",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=112) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "d96f772e-4789-4068-966b-dcb7cc7cb4bc"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=113) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=112) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=113) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=114) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 15,
-#    "objectGroup": "9becdcbb-9b1b-4c30-bfb6-896b4b63107d"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=114) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLButtonElement",
-#       "description": "button",
-#       "objectId": "135302471925752919.2.22",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=115) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=115) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=116) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.22"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "9becdcbb-9b1b-4c30-bfb6-896b4b63107d",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=116) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":\\"button\\"}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.23",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=117) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "9becdcbb-9b1b-4c30-bfb6-896b4b63107d"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=118) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=117) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=118) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=119) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 15,
-#    "objectGroup": "a3795274-e928-4d58-a430-ffb8338cd3f7"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=119) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLButtonElement",
-#       "description": "button",
-#       "objectId": "135302471925752919.2.24",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=120) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=120) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=121) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.24"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "a3795274-e928-4d58-a430-ffb8338cd3f7",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=121) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":true}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.25",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=122) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "a3795274-e928-4d58-a430-ffb8338cd3f7"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=123) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=122) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=123) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=124) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 15,
-#    "objectGroup": "db042793-c058-4758-8452-2cd5b52f46d0"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=124) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLButtonElement",
-#       "description": "button",
-#       "objectId": "135302471925752919.2.26",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=125) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=125) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=126) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.26"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "db042793-c058-4758-8452-2cd5b52f46d0",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=126) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":{\\"left\\":0,\\"top\\":0,\\"height\\":39.1875,\\"width\\":80.390625}}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.27",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=127) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "db042793-c058-4758-8452-2cd5b52f46d0"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=128) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=127) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=128) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=129) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 15,
-#    "objectGroup": "085ec93a-e9b9-4937-8599-b5d6e286ffc2"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=129) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLButtonElement",
-#       "description": "button",
-#       "objectId": "135302471925752919.2.28",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=130) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=130) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=131) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.28"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "085ec93a-e9b9-4937-8599-b5d6e286ffc2",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=131) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":{\\"x\\":479.984375,\\"y\\":341.875,\\"clone\\":{},\\"ceil\\":{},\\"floor\\":{},\\"round\\":{},\\"translate\\":{},\\"scale\\":{}}}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.29",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=132) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "085ec93a-e9b9-4937-8599-b5d6e286ffc2"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=133) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=132) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=133) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=134) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 15,
-#    "objectGroup": "1cf0abc7-822c-4146-8306-f58da745edb5"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=134) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLButtonElement",
-#       "description": "button",
-#       "objectId": "135302471925752919.2.30",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=135) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=135) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=136) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.30"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "1cf0abc7-822c-4146-8306-f58da745edb5",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=136) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":{\\"clickable\\":true}}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.31",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=137) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "1cf0abc7-822c-4146-8306-f58da745edb5"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchMouseEvent (id=138) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "button": "none",
-#    "buttons": 0,
-#    "clickCount": 0,
-#    "force": 0.0,
-#    "modifiers": 0,
-#    "pointerType": "mouse",
-#    "tangentialPressure": 0.0,
-#    "tiltX": 0,
-#    "tiltY": 0,
-#    "twist": 0,
-#    "type": "mouseMoved",
-#    "x": 520,
-#    "y": 361
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchMouseEvent (id=139) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "button": "left",
-#    "buttons": 0,
-#    "clickCount": 1,
-#    "force": 0.0,
-#    "modifiers": 0,
-#    "pointerType": "mouse",
-#    "tangentialPressure": 0.0,
-#    "tiltX": 0,
-#    "tiltY": 0,
-#    "twist": 0,
-#    "type": "mousePressed",
-#    "x": 520,
-#    "y": 361
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Input.dispatchMouseEvent (id=140) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "button": "left",
-#    "buttons": 1,
-#    "clickCount": 1,
-#    "force": 0.0,
-#    "modifiers": 0,
-#    "pointerType": "mouse",
-#    "tangentialPressure": 0.0,
-#    "tiltX": 0,
-#    "tiltY": 0,
-#    "twist": 0,
-#    "type": "mouseReleased",
-#    "x": 520,
-#    "y": 361
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=137) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchMouseEvent (id=138) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchMouseEvent (id=139) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Input.dispatchMouseEvent (id=140) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Waiting for pending navigations...
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=141) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=141) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Done waiting for pending navigations. Status: ok
-# [INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] RESPONSE ClickElement
-# [32m[ [INFO] default - [39mWaiting 2sec to allow greet message to be displayed
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] COMMAND FindElement {
-#    "using": "css selector",
-#    "value": "p[id=\\"greet-msg\\"]"
-# }
-# [INFO]: Waiting for pending navigations...
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=142) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=142) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=143) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=143) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=144) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=144) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=145) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [  ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=145) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":{\\"element-6066-11e4-a52e-4f735466cecf\\":0}}"
-#          }, {
-#             "type": "node",
-#             "value": {
-#                "attributes": {
-#                   "id": "greet-msg"
-#                },
-#                "backendNodeId": 16,
-#                "childNodeCount": 1,
-#                "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#                "localName": "p",
-#                "namespaceURI": "http://www.w3.org/1999/xhtml",
-#                "nodeType": 1,
-#                "shadowRoot": null
-#             }
-#          } ]
-#       },
-#       "description": "Array(2)",
-#       "objectId": "135302471925752919.2.32",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Waiting for pending navigations...
-# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=146) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=146) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] RESPONSE FindElement {
-#    "element-6066-11e4-a52e-4f735466cecf": "f.797F7AE9AE7D1A95B7A1CD4725AFA82E.d.4EF5B3B4665E8BDCE92AA448306C11A4.e.16"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: [f0e42ebb8fc6c4b01f69757be8c8f7e5] COMMAND GetElementText {
-#    "id": "f.797F7AE9AE7D1A95B7A1CD4725AFA82E.d.4EF5B3B4665E8BDCE92AA448306C11A4.e.16"
-# }
-# [INFO]: Waiting for pending navigations...
-# [DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=147) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=147) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Done waiting for pending navigations. Status: ok
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=148) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=148) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: DOM.resolveNode (id=149) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "backendNodeId": 16,
-#    "objectGroup": "f98decd0-f48d-4c84-aee3-2ae6d46e72c7"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: DOM.resolveNode (id=149) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "object": {
-#       "className": "HTMLParagraphElement",
-#       "description": "p\#greet-msg",
-#       "objectId": "135302471925752919.2.33",
-#       "subtype": "node",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Page.getFrameTree (id=150) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Page.getFrameTree (id=150) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "frameTree": {
-#       "frame": {
-#          "adFrameStatus": {
-#             "adFrameType": "none"
-#          },
-#          "crossOriginIsolatedContextType": "NotIsolated",
-#          "domainAndRegistry": "tauri.localhost",
-#          "gatedAPIFeatures": [  ],
-#          "id": "797F7AE9AE7D1A95B7A1CD4725AFA82E",
-#          "loaderId": "4EF5B3B4665E8BDCE92AA448306C11A4",
-#          "mimeType": "text/html",
-#          "secureContextType": "SecureLocalhost",
-#          "securityOrigin": "http://tauri.localhost",
-#          "url": "http://tauri.localhost/"
-#       }
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.callFunctionOn (id=151) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "arguments": [ {
-#       "objectId": "135302471925752919.2.33"
-#    } ],
-#    "awaitPromise": true,
-#    "functionDeclaration": "function(){ return (function() { // Copyright 2012 The Chromium Authors\\n// Use of this source code is governed by a BSD-style license that can be\\n// found in the LICENSE file.\\n\\n/**\\n * Enum for WebD...",
-#    "objectGroup": "f98decd0-f48d-4c84-aee3-2ae6d46e72c7",
-#    "serializationOptions": {
-#       "serialization": "deep"
-#    },
-#    "uniqueContextId": "3486246105384540323.-4867044150354688212"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.callFunctionOn (id=151) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "className": "Array",
-#       "deepSerializedValue": {
-#          "type": "array",
-#          "value": [ {
-#             "type": "string",
-#             "value": "{\\"status\\":0,\\"value\\":\\"Hello, Hello World! You've been greeted from Rust!\\"}"
-#          } ]
-#       },
-#       "description": "Array(1)",
-#       "objectId": "135302471925752919.2.34",
-#       "subtype": "array",
-#       "type": "object"
-#    }
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.releaseObjectGroup (id=152) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "objectGroup": "f98decd0-f48d-4c84-aee3-2ae6d46e72c7"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[INFO]: Waiting for pending navigations...
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Command: Runtime.evaluate (id=153) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "expression": "1"
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.releaseObjectGroup (id=152) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-# }
-# [36m[ [DEBUG] driverProcess.stderr - [39m[DEBUG]: DevTools WebSocket Response: Runtime.evaluate (id=153) (session_id=007491C2E79B21B0CD32AA92B6EB78DF) 797F7AE9AE7D1A95B7A1CD4725AFA82E {
-#    "result": {
-#       "description": "1",
-#       "type": "number",
-#       "value": 1
-#    }
-# }
-# [32m[ [INFO] default - [39mText found { text: "Hello, Hello World! You've been greeted from Rust!" }
+# [INFO]: [a12a165a2d7c1fb6d6b70c346fba2967] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"css selector","selector":"input[id="greet-input"]"}
+#   (Session info: MicrosoftEdge=126.0.2592.81)
     # Subtest: Send hello world to input
-    ok 2 - Send hello world to input
+    not ok 2 - Send hello world to input
       ---
-      duration_ms: 2223.0445
+      duration_ms: 14.3604
+      location: 'D:\\a\\tauri-e2e\\tauri-e2e\\tests-e2e-js\\src\\main.ts:43:26'
+      failureType: 'testCodeFailure'
+      error: |-
+        no such element: Unable to locate element: {"method":"css selector","selector":"input[id="greet-input"]"}
+          (Session info: MicrosoftEdge=126.0.2592.81)
+      code: 'ERR_TEST_FAILURE'
+      name: 'NoSuchElementError'
+      stack: |-
+        Object.throwDecodedError (D:\a\tauri-e2e\tauri-e2e\node_modules\selenium-webdriver\lib\error.js:521:15)
+        parseHttpResponse (D:\a\tauri-e2e\tauri-e2e\node_modules\selenium-webdriver\lib\http.js:514:13)
+        Executor.execute (D:\a\tauri-e2e\tauri-e2e\node_modules\selenium-webdriver\lib\http.js:446:28)
+        processTicksAndRejections (node:internal/process/task_queues:95:5)
+        async WebDriver.execute (D:\a\tauri-e2e\tauri-e2e\node_modules\selenium-webdriver\lib\webdriver.js:742:17)
+        async toWireValue (D:\a\tauri-e2e\tauri-e2e\node_modules\selenium-webdriver\lib\webdriver.js:147:15)
+        async D:\a\tauri-e2e\tauri-e2e\node_modules\selenium-webdriver\lib\webdriver.js:193:16
+        async forEachKey (D:\a\tauri-e2e\tauri-e2e\node_modules\selenium-webdriver\lib\webdriver.js:187:9)
+        async convertKeys (D:\a\tauri-e2e\tauri-e2e\node_modules\selenium-webdriver\lib\webdriver.js:192:3)
+        async WebDriver.execute (D:\a\tauri-e2e\tauri-e2e\node_modules\selenium-webdriver\lib\webdriver.js:740:22)
       ...
     1..2
-ok 1 - Tauri E2E tests
+not ok 1 - Tauri E2E tests
   ---
-  duration_ms: 14912.8169
+  duration_ms: 10704.3663
   type: 'suite'
+  location: 'D:\\a\\tauri-e2e\\tauri-e2e\\tests-e2e-js\\src\\main.ts:37:26'
+  failureType: 'subtestsFailed'
+  error: '1 subtest failed'
+  code: 'ERR_TEST_FAILURE'
   ...
-# [32m[ [INFO] default - [39mExit: 0, killing webDriverProcess
-# [32m[ [INFO] default - [39mExit: 0, killing driver
+# [32m[ [INFO] default - [39mExit: 1, killing webDriverProcess
+# [32m[ [INFO] default - [39mExit: 1, killing driver
 1..1
 # tests 2
 # suites 1
-# pass 2
-# fail 0
+# pass 1
+# fail 1
 # cancelled 0
 # skipped 0
 # todo 0
+error: Recipe `test-e2e-fast` failed with exit code 1
+##[error]Process completed with exit code 1.
